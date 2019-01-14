@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html data-ng-app="myApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootsrap-theme.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div >
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+</div>
+        
+        <div>
+  <p>Name: <input type="text" ng-model="nam"></p>
+  <p ng-bind="nam"></p>
+</div>
+        
+         <div ng-init="firstName='John'">
+
+<p>The name is <span ng-bind="firstName"></span></p>
+
+</div>
+        
+         <div data-ng-init="firstNameee='moly'">
+
+<p>The name is <span data-ng-bind="firstNameee"></span></p>
+
+</div> 
+        
+        <div >
+  <p>My first expression: {{ 5 + 5 }}</p>
+</div>
+        
+        <div>
+  <p>Name: <input type="text" ng-model="name2"></p>
+  <p>{{name2}}</p>
+</div>
+        
+         <div  ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "mr";
+    $scope.lastName= "Doe";
+});
+</script> 
+
+<div >
+  <p>My first expression: {{ 5 + 5 }}</p>
+</div>
+
+
+<div  ng-init="myCol='lightblue'">
+
+<input style="background-color:{{myCol}}" ng-model="myCol">
+
+</div>
+        
+
+ <div ng-init="quantity=1;cost=5">
+
+<p>Total in dollar: {{ quantity * cost }}</p>
+
+</div> 
+
+
+
+ <div ng-init="quantity=1;cost=5">
+
+<p>Total in dollar: <span ng-bind="quantity * cost"></span></p>
+
+</div> 
+
+
+ <div ng-init="firstName='Joo';lastName='Doe'">
+
+<p>The name is {{ firstName + " " + lastName }}</p>
+
+</div> 
+
+
+ <div ng-init="firstNamew='Jiyyyy';lastNamew='Doe'">
+
+<p>The name is <span ng-bind="firstNamew + ' ' + lastNamew"></span></p>
+
+</div> 
+
+
+ <div ng-init="person={firstName:'tolu',lastName:'rila'}">
+
+<p>The name is {{ person.lastName }}</p>
+
+</div> 
+
+
+ <div ng-init="personw={firstNamet:'John',lastNamet:'Doe'}">
+
+<p>The name is <span ng-bind="personw.lastNamet"></span></p>
+
+</div> 
+
+
+ <div ng-init="points=[1,15,19,2,40]">
+
+<p>The third result is {{ points[2] }}</p>
+
+</div> 
+
+
+
+ <div ng-init="pointsss=[1,15,19,2,40]">
+
+<p>The third result is <span ng-bind="pointsss[2]"></span></p>
+
+</div> 
+    </body>
+</html>
