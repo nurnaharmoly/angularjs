@@ -4,13 +4,15 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html ng-app="">
+<html ng-app="myApp">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    </head>
+         
+        
+        
     <body>
         <div>
             <p>Name: <input type="text" ng-model="name"></p>
@@ -38,5 +40,23 @@ and open the template in the editor.
         <div>
             <p>My first expression: {{5+5}}</p>
         </div>
+        
+        <div>
+            <p>Name:<input type="text" ng-model="name2"></p>
+            <p>{{name2}}</p>
+        </div>
+        
+        
+        
+        <div ng-controller="myCtrl">
+            First Name:<input type="text" ng-model="firstName"><br>
+            Last Name:<input type="text" ng-model="lastName"><br>
+            <br>
+        Full Name:{{firstName + " " + lastName}}
+        </div>
+        
+        <script>
+            var app = angular.module('myApp')
+        </script>
     </body>
 </html>
