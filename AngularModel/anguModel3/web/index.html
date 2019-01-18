@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <form ng-app="" name="myForm" ng-init="myText='post@myweb.com'">
+            
+            Email:
+            <input type="email" name="myAddress" ng-model="myText" required>
+            
+            
+            <h1>Status</h1>
+            <p>Valid: {{myForm.myAddress.$valid}} (if ture, the value meets all criteria).</p>
+            <p>Dirty: {{myForm.myAddress.$dirty}} (if ture, the value has been change).</p>
+            <p>Touched: {{myForm.myAddress.$touched}} (if ture, the field has been in focus).</p>
+        </form>
+        
+    </body>
+</html>
